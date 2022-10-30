@@ -5,9 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Recipes</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Odin Recipes</h1>
-    <a href="recipes/pani-puri.html">Pani Puri</a>
+    <header>
+      <h1>A simple recipe website</h1>
+    </header>
+
+    <main>
+      <div class="col top">
+        <a href="recipes/pani-puri.html" id="pani-puri">
+          <img src="assets/Pani-Puri.jpg" class="food" alt="Pani Puri" />
+        </a>
+        <a href="recipes/samosa-chaat.html" id="samosa-chaat">
+          <img src="assets/smosa-chaat.webp" class="food" alt="Samosa Chaat" />
+        </a>
+      </div>
+
+      <div class="col mid">
+        <div class="link active" id="default-banner">
+          <p><em>hover</em> to know more</p>
+          <p><em>click </em> to see recipe</p>
+        </div>
+        <div class="link" id="pani-puri-banner">
+          <em>Paani Puri</em>
+        </div>
+        <div class="link" id="samosa-chaat-banner">
+          <em>Samosa Chaat</em>
+        </div>
+        <div class="link" id="churmur-chaat-banner">
+          <em>Churmur Chaat</em>
+        </div>
+      </div>
+
+      <div class="col bot">
+        <a href="recipes/churmur-chaat.html" id="churmur-chaat">
+          <img
+            src="assets/Churmur-Chaat.jpg"
+            class="food"
+            alt="Churmur Chaat"
+          />
+        </a>
+        <div class="dev-box">
+          <img src="assets/line-drawing.png" alt="" />
+          <p id="default-text" class="active">
+            <em>Hover</em> over images to know more.
+          </p>
+          <p id="pani-puri-text">
+            <em>Pani puri</em> is an ancient and still loved street food in
+            india. And it's also this favorite snack of the website's developer.
+          </p>
+          <p id="samosa-text">
+            <em>Samosa chaat</em> is made with samosas, chana masala, various
+            chutneys and spices. This is one of the popular chaat snack recipe
+            from north India.
+          </p>
+          <p id="churmur-text">
+            <em>Churmur chaat</em> is a crispy, tangy, savoury 'chaat' is a
+            popular Calcutta street food dished out by phuchkawalas and is super
+            easy to make.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made by as00r for TOP</p>
+    </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>

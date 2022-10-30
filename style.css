@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inria Serif", serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+header {
+  border-bottom: 1px solid black;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 64px;
+}
+
+header,
+footer {
+  max-height: 10vh;
+}
+
+main {
+  max-height: 80vh;
+}
+
+.col {
+  margin-bottom: 16px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.bot {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bot > * {
+  flex-grow: 1;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+img {
+  width: 100%;
+  height: 164px;
+  object-fit: cover;
+}
+
+.bot img {
+  width: 100%;
+}
+
+.dev-box {
+  margin-top: 16px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.dev-box p {
+  text-align: right;
+  display: none;
+  max-width: 35ch;
+}
+
+.dev-box img {
+  max-width: 150px;
+  height: auto;
+}
+
+.dev-box p.active {
+  display: block;
+  animation: reveal 600ms ease forwards;
+}
+
+footer {
+  border: 1px solid black;
+  text-align: center;
+  padding: 32px 16px;
+  position: fixed;
+  background: white;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mid {
+  border: 1px solid black;
+  padding: 16px 32px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.link {
+  display: none;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.link.active {
+  display: block;
+  animation: reveal 600ms ease forwards;
+}
+
+a {
+  text-decoration: none;
+  width: 100%;
+}
+
+.food {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.food:hover {
+  filter: grayscale(0%);
+}
+
+.recipe-page.dev-box {
+  flex-direction: column;
+  list-style-position: inside;
+  width: 100%;
+  padding: 16px 32px;
+  align-items: stretch;
+  margin-top: 0;
+  margin-bottom: 16px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.recipe-page p {
+  display: block;
+  min-width: 100%;
+  text-align: justify;
+}
+
+.col.fixed {
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed .img-container {
+  margin-bottom: 16px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed .img-container img {
+  flex-grow: 1;
+  object-fit: cover;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+/* Animation */
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Laptop Screen */
+@media screen and (min-width: 1080px) {
+  main {
+    flex-direction: row-reverse;
+    position: relative;
+    min-height: 80vh;
+    gap: 16px;
+  }
+
+  .mid {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background: white;
+    z-index: 999;
+  }
+  .top,
+  .bot {
+    margin-bottom: 0;
+  }
+
+  .bot,
+  .top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bot > *,
+  .top > * {
+    flex-grow: 1;
+  }
+
+  .bot > a,
+  .top > a:nth-child(2) {
+    flex-grow: 25;
+  }
+
+  .bot a,
+  .top a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bot a img,
+  .top a img {
+    flex-grow: 1;
+  }
+
+  header,
+  footer {
+    max-height: 10vh;
+  }
+}
+
+/* For XS mobile */
+
+@media screen and (max-width: 480px) {
+  .dev-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+}
