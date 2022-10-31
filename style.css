@@ -189,6 +189,7 @@ ol ol li:first-child {
 
 li {
   margin-bottom: 16px;
+  text-align: left;
 }
 
 ::-webkit-scrollbar-track {
