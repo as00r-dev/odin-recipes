@@ -291,7 +291,6 @@ li {
 @media screen and (max-width: 480px) {
   .dev-box {
     flex-direction: column;
-    text-align: center;
   }
 
   .link {
